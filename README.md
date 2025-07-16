@@ -30,8 +30,8 @@
 
 ## ⚙️ How It Works
 
-1. **Upload PDF**  
-   User uploads a PDF through the Streamlit interface.
+1. **Loading Data**  
+   Grab Data from wikipedia. load it using a web base loader.
 
 2. **Chunk & Embed**  
    Document is split into smaller chunks and converted into embeddings.
