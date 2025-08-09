@@ -31,13 +31,14 @@ def send_input():
 query= st.text_input("Please enter a query", key="query", on_change=send_input)
 send_button = st.button("Send", key="send_btn")  # Single send button
     
-voice_recording=speech_to_text(language="en",use_container_width=True,just_once=True,key="STT")
+# voice_recording=speech_to_text(language="en",use_container_width=True,just_once=True,key="STT")
     
-if voice_recording:
-    query=voice_recording
+# if voice_recording:
+#     query=voice_recording
     
 # Chat logic
-if (query and st.session_state.send_input) or voice_recording:
+if (query and st.session_state.send_input) 
+# or voice_recording:
     with st.spinner("Processing... Please wait!"):  # Spinner starts here
         response =chain.stream({'question': query})
         print(response)
@@ -50,4 +51,5 @@ if (query and st.session_state.send_input) or voice_recording:
 with chat_container:
     for role, message in st.session_state.messages:
         st.chat_message(role).write(message) 
+
 
