@@ -37,7 +37,7 @@ send_button = st.button("Send", key="send_btn")  # Single send button
 #     query=voice_recording
     
 # Chat logic
-if (query and st.session_state.send_input) 
+if (query and st.session_state.send_input) :
 # or voice_recording:
     with st.spinner("Processing... Please wait!"):  # Spinner starts here
         response =chain.stream({'question': query})
@@ -51,5 +51,6 @@ if (query and st.session_state.send_input)
 with chat_container:
     for role, message in st.session_state.messages:
         st.chat_message(role).write(message) 
+
 
 
