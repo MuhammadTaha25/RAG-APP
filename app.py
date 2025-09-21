@@ -20,7 +20,7 @@ chain=create_expert_chain(LLM,retriever)
 # Set the title of the app
 # Initialize components
 # Chat container to display conversation
-st.set_page_config(page_title="Musk ChatBot | Ask Elon-Level Questions")
+st.set_page_config(page_title="RAG ChatBot | Ask Elon-Level Questions")
 st.title("Ask Anything About Musk")
 chat_container = st.container()
 if "messages" not in st.session_state:
@@ -51,6 +51,7 @@ if (query and st.session_state.send_input) :
 with chat_container:
     for role, message in st.session_state.messages:
         st.chat_message(role).write(message) 
+
 
 
 
