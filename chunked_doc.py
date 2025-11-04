@@ -1,4 +1,4 @@
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from doc_loader import load_wikipedia_content
 
 def chunking_documents(chunk_size=1500, chunk_overlap=150):
@@ -27,4 +27,5 @@ def chunking_documents(chunk_size=1500, chunk_overlap=150):
     chunks = text_splitter.split_documents(doc)
 
     return chunks
+
 
