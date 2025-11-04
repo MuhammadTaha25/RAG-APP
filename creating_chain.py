@@ -1,4 +1,4 @@
-from langchain.prompts.chat import ChatPromptTemplate
+from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 import streamlit as st
 from langchain.schema import StrOutputParser
 from operator import itemgetter
@@ -47,3 +47,4 @@ Question: {question}
     _chain = setup | _prompt | LLM | StrOutputParser()
 
     return _chain
+
