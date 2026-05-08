@@ -11,7 +11,6 @@ from streamlit_mic_recorder import speech_to_text
 # langsmith_project="muskchatbot"
 
 OPENAI_API_KEY =st.secrets['OPENAI_API_KEY']
-GOOGLE_API_KEY =st.secrets['google_api_key']
 
 LLM=initialize_LLM(OPENAI_API_KEY,GOOGLE_API_KEY)
 retriever=manage_pinecone_store()
