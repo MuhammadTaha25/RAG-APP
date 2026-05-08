@@ -12,7 +12,7 @@ from streamlit_mic_recorder import speech_to_text
 
 OPENAI_API_KEY =st.secrets['OPENAI_API_KEY']
 
-LLM=initialize_LLM(OPENAI_API_KEY,GOOGLE_API_KEY)
+LLM=initialize_LLM(OPENAI_API_KEY)
 retriever=manage_pinecone_store()
 chain=create_expert_chain(LLM,retriever)
 # Build the chain
